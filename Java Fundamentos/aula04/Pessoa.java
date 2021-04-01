@@ -6,12 +6,15 @@ public class Pessoa extends Colaborador{
 
     // Construtor
     public Pessoa(String nome, String email, int idade, String cargo, double salario){
+        
+        // Enviar os parâmetros informados para os atributos
         this.nome = nome;
         this.email = email;
         this.idade = idade;
         this.cargo = cargo;
         this.salario = salario;
 
+        // Executando métodos
         exibirPessoa();
         exibirColaborador();
     }
