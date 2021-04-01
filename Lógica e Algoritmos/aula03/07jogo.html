@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 - Jogo</title>
+    
+    <script>
+
+        // Gerar número aleatório
+        var numeroAleatorio = Math.round(Math.random() * 100) + 1;
+
+        alert(numeroAleatorio);
+
+        // Contador de erros
+        var erros = -1;
+
+        // Laço
+        do{
+            // Incrementar o contatos de erros
+            erros++;
+
+            // Obter o palpite
+            var palpite = prompt("Informe um número entre 1 e 100");
+
+            // Dica
+            var resto;
+
+            // Obter o resto de maneira positiva
+            if(palpite > numeroAleatorio){
+                resto = palpite - numeroAleatorio;
+            }else{
+                resto = numeroAleatorio - palpite;
+            }
+
+            // Se o resto for diferente de zero
+            if(resto != 0){
+
+                // Dicas
+                if(resto <= 5){
+                    alert("Está perto");
+                }else if(resto <= 10){
+                    alert("Está longe");
+                }else if(resto <= 20){
+                    alert("Muito longe!");
+                }else{
+                    alert("Extremamente longe!!!!!");
+                }
+
+            }
+
+        }while(palpite != numeroAleatorio);
+
+        // Mensagem
+        if(erros == 0){
+            alert("De primeira!");
+        }else if(erros <= 5){
+            alert("Foi bom");
+        }else if(erros <= 10){
+            alert("Continue treinando");
+        }else{
+            alert("Muito ruim");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

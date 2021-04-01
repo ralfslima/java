@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+
+    <script>
+
+        // Obter dados
+        var temperatura= parseFloat(prompt("Informe a temperatura que deseja converter"));
+        var tipo = parseInt(prompt("1)Celsius para Farenheit \n2)Farenheit para Celsius"));
+
+        // Condicional
+        if(tipo == 1){
+            document.write(((temperatura * 1.8) + 32) + "Celsius");
+        }else{
+            document.write(((temperatura - 32) / 1.8) + "Farenheit");
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

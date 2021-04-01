@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 - Exercício</title>
+
+    <script>
+
+        // Vetor
+        var numeros = [];
+
+        // Índice para cadastro
+        var indiceCadastro = 0;
+
+        // Laço - Armazenar
+        do{
+            
+            // Obter o número
+            var numero = prompt("Informe o " + (indiceCadastro+1) + "º número.");
+
+            // Valida se o número informado existe no vetor
+            var existe = false;
+            for(var indice = 0; indice < numeros.length; indice++){
+                if(numero == numeros[indice]){
+                    existe = true;
+                }
+            }
+
+            // Valida caso o número exista
+            if(existe == true){
+                alert("O número informado já foi cadastrado, tente novamente");
+            }else{
+                numeros[indiceCadastro] = numero;
+                indiceCadastro++;
+            }
+
+        }while(indiceCadastro < 5);
+
+        // Listar os números informados
+        for(var indice = 0; indice < numeros.length; indice++){
+            document.write((indice+1) + "º número informado: " + numeros[indice] + "<br>");
+        }
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

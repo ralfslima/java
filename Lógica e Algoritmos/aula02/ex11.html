@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+
+    <script>
+
+        // Obter dados
+        var valor = parseFloat(prompt("Informe o valor do pagamento efetuado"));
+        var pagamento = parseInt(prompt("Como foi efetuado o pagamento? \n1)A vista \n2)A prazo"));
+
+        // Condicional
+        if(pagamento == 1 && valor >= 100){
+            document.write("Desconto de 10%, total a pagar R$ " + (valor * 0.9));
+        }else{
+            document.write("Pagamento integral de R$ " + valor);
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

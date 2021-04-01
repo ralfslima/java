@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 03</title>
+
+    <script>
+
+        // Função
+        function funcao(){
+
+            // Obter a cidade
+            var cidade = document.getElementById("lista").value;
+
+            // Escolha
+            switch(cidade){
+                case "Blumenau":
+                    document.getElementById("descricao").innerHTML = "Cidade onde ocorre a maior festa alemã das américas.";
+                break;
+
+                case "Florianópolis":
+                    document.getElementById("descricao").innerHTML = "Capital do estado de Santa Catarina.";
+                break;
+                
+                case "Joinville":
+                    document.getElementById("descricao").innerHTML = "Mair cidade do estado catarinense.";
+                break;
+
+                default:
+                    document.getElementById("descricao").innerHTML = "";
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    
+    <!-- Lista -->
+    <select id="lista" onchange="funcao()">
+        <option>Escolha a cidade</option>
+        <option>Blumenau</option>
+        <option>Florianópolis</option>
+        <option>Joinville</option>
+    </select>
+
+    <!-- Exibir a descrição da cidade -->
+    <p id="descricao"></p>
+
+</body>
+</html>

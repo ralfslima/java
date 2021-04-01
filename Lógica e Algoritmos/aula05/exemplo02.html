@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 02</title>
+
+    <script>
+
+        // Função
+        function acao(){
+
+            // Obter o valor informado no id campo
+            var texto = document.getElementById("campo").value;
+
+            // Visualizar o texto no id exibir
+            document.getElementById("exibir").innerHTML = texto;
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <input type="text" placeholder="Informe algo..." id="campo">
+    <button onclick="acao()">Enviar</button>
+
+    <h1 id="exibir"></h1>
+</body>
+</html>

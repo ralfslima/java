@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 04</title>
+
+    <script>
+
+        // Função
+        function acao(){
+
+            // Obter o texto digitado
+            var txt = document.getElementById("campo").value;
+
+            // Exibir o texto em letras minúsculas
+            document.getElementById("minusculas").innerHTML = txt.toLowerCase();
+
+            // Exibir o texto em letras maiúsculas
+            document.getElementById("maiusculas").innerHTML = txt.toUpperCase();
+
+        }
+
+    </script>
+</head>
+<body>
+    
+    <input type="text" id="campo" placeholder="Digite algo..." onkeyup="acao()">
+
+    <p id="minusculas"></p>
+    <p id="maiusculas"></p>
+
+</body>
+</html>

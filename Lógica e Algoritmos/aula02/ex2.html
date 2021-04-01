@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+
+    <script>
+
+        // Obter notas
+        var nota1 = parseFloat(prompt("Informe a 1ª nota"));
+        var nota2 = parseFloat(prompt("Informe a 2ª nota"));
+        var nota3 = parseFloat(prompt("Informe a 3ª nota"));
+
+        // Média
+        var media = (nota1 + nota2 + nota3) / 3;
+
+        // Situação
+        var situacao = "reprovado";
+        
+        if(media >= 7){
+            situacao = "aprovado";
+        }
+
+        // Mensagem
+        document.write("A média obtida foi " + media.toFixed(2) +" e sua situação é " + situacao);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

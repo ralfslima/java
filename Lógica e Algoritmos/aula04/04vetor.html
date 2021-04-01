@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - Vetor</title>
+
+    <script>
+
+        // Variável de soma
+        var soma = 0;
+
+        // Vetor
+        var numeros = [];
+
+        // Índice
+        var indice = 0;
+
+        // Laço
+        do{
+
+            // Obter um número
+            numeros[indice] = parseInt(prompt("Informe um número"));
+
+            // Soma
+            soma += numeros[indice];
+  
+            // Incrementar índice
+            indice++;
+        }while(numeros[indice - 1] != 0);
+
+        // Exibe a soma
+        alert("A soma é " + soma);
+
+        // Números que compõem a soma
+        for(var indice = 0; indice < numeros.length; indice++){
+            document.write(numeros[indice] + "<br>");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

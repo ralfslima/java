@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 - Exercício</title>
+
+    <script>
+
+        // Vetor
+        var numeros = [];
+
+        // Soma
+        var soma = 0;
+
+        // Obter sete números e somar
+        for(var indice = 0; indice < 7; indice++){
+            numeros[indice] = parseInt(prompt("Informe o "+(indice+1) + "º número"));
+
+            soma += numeros[indice];
+        }
+
+        // Média
+        var media = soma / 7;
+
+        // Exibir dados
+        document.write("A soma é de " + soma + "<hr>");
+        document.write("A média é de " + media + "<hr>");
+        document.write("Os números maiores ou iguais a média são: <br>");
+        for(var indice = 0; indice < 7; indice++){
+            if(numeros[indice] >= media){
+                document.write(numeros[indice] + "<br>");
+            }
+        }
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 - Exercício</title>
+
+    <script>
+
+        // Vetores
+        var nomes = [];
+        var idades = [];
+
+        // Laço - Armazenar
+        for(var indice = 0; indice < 3; indice++){
+            nomes[indice] = prompt("Informe o " +(indice+1) + "º nome");
+            idades[indice] = prompt("Informe a " +(indice+1) + "ª idade");
+        }
+
+        // Obter a maior idade
+        var maiorIdade = idades[0];
+        for(var indice=1; indice<idades.length; indice++){
+            if(idades[indice] > maiorIdade){
+                maiorIdade = idades[indice];
+            }
+        }
+
+        // Exibir a maior idade
+        document.write("A maior idade é " + maiorIdade + " anos.<hr>");
+
+        // Listar o nome das pessoas com a maior idade
+        for(var indice=0; indice<idades.length; indice++){
+            if(idades[indice] == maiorIdade){
+                document.write(nomes[indice] + "<br>");
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

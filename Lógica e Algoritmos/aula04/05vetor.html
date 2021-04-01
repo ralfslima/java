@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 - Vetor</title>
+
+    <script>
+
+        // Menu
+        var menu = "***MENU***";
+            menu+= "\n1) Cadastrar";
+            menu+= "\n2) Listar";
+            menu+= "\n3) Finalizar";
+
+        // Vetores
+        var nomes = [];
+        var telefones = [];
+
+        // Índice
+        var indice = 0;
+
+        // Opção
+        var opcao;
+
+        // Laço
+        do{
+
+            // Obter a opção
+            opcao = parseInt(prompt(menu));
+
+            // Escolha
+            switch(opcao){
+                case 1:
+                    nomes[indice] = prompt("Informe o nome do contato");
+                    telefones[indice] = prompt("Informe o telefone do contato");
+                    indice++;
+                break;
+
+                case 2:
+
+                    if(nomes.length > 0){
+                        var listagem = "Sua agenda possui os seguintes contatos:\n";
+                        for(var i=0; i<nomes.length; i++){
+                            listagem += nomes[i] + " - " +telefones[i] + "\n";
+                        }
+                        alert(listagem);
+                    }else{
+                        alert("Você não tem nenhum contato cadastrado.")
+                    }
+                break;
+
+                case 3:
+                    alert("Obrigado por utilizar nosso sistema.")
+                break;
+
+                default:
+                    alert("Opção inválida, tente novamente.");
+            }
+
+
+        }while(opcao != 3);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 - Vetor</title>
+
+    <script>
+
+        // Vetor de números
+        var numeros = [];
+
+        // Verifica se deseja cadastrar um novo número
+        var novoNumero;
+
+        // Contador
+        var contador = 0;
+
+        // Contadores de pares e ímpares
+        var par = 0;
+        var impar = 0;
+
+        // Laço
+        do{
+            // Cadastrar um novo número
+            numeros[contador] = prompt("Informe um número");
+
+            // Verificar se é par ou ímpar
+            if(numeros[contador] % 2 == 0){
+                par++;
+            }else{
+                impar++;
+            }
+
+            // Incrementar o contador
+            contador++;
+
+            // Pergunta
+            novoNumero = confirm("Deseja cadastrar um novo número?");
+        }while(novoNumero == true);
+
+        // Exibir quantidade de pares e ímpares
+        document.write("Há " + par + " números pares.<br>");
+        document.write("Há " + impar + " números impares.<hr>");
+
+        // Exibir os números pares
+        document.write("Os números pares são:<br>")
+        for(var indice = 0; indice<numeros.length; indice++){
+            if(numeros[indice] % 2 == 0){
+                document.write(numeros[indice] + " ");
+            }
+        }
+
+        // Exibir os números ímpares
+        document.write("<br>Os números ímpares são:<br>")
+        for(var indice = 0; indice<numeros.length; indice++){
+            if(numeros[indice] % 2 != 0){
+                document.write(numeros[indice] + " ");
+            }
+        }
+        
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
