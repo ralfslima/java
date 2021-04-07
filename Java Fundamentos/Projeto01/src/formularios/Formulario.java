@@ -71,6 +71,8 @@ public class Formulario extends JFrame {
 		JButton btnAlterar = new JButton("Alterar");
 		JButton btnExcluir = new JButton("Excluir");
 		JButton btnCancelar = new JButton("Cancelar");
+		table = new JTable();
+		txtIdade = new JTextField();
 		
 		// Cadastrar
 		btnCadastrar.addActionListener(new ActionListener() {
@@ -182,16 +184,7 @@ public class Formulario extends JFrame {
 			}
 		});
 		
-		// Evento para validar apenas números (idade)
-		
-		
-		// JScrolPane, Tabela e DefaultTableModel
-		scrollPane.setBounds(16, 318, 488, 189);
-		contentPane.add(scrollPane);
-		table = new JTable();
-		table.setModel(Acao.listar());
-		scrollPane.setViewportView(table);
-		
+		// Evento da tabela
 		table.addMouseListener(new MouseListener() {
 			
 			@Override
@@ -238,6 +231,35 @@ public class Formulario extends JFrame {
 			}
 		});
 		
+		// Evento para validar apenas números (idade)
+		txtIdade.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyReleased(KeyEvent e) {
+				
+				// Obter o valor do campo de texto e a quantidade de caracteres
+				String texto = txtIdade.getText();
+				int qtdCaracteres = texto.length();
+				
+				// Verifica a quantidade de caracteres
+				if(qtdCaracteres > 0) {
+
+					// Se o código da última tecla estiver entre 49 e 58
+					if(e.getKeyCode() < 49 || e.getKeyCode() > 58) {
+						txtIdade.setText(texto.substring(0, qtdCaracteres - 1));
+					}
+					
+				}
+				
+			}
+		});
+		
+		
+		// JScrolPane, Tabela e DefaultTableModel
+		scrollPane.setBounds(16, 318, 488, 189);
+		contentPane.add(scrollPane);
+		table.setModel(Acao.listar());
+		scrollPane.setViewportView(table);
+		
 		// Labels
 		lblNome.setForeground(new Color(255, 0, 0));
 		lblNome.setFont(new Font("Arial", Font.PLAIN, 16));
@@ -269,31 +291,9 @@ public class Formulario extends JFrame {
 		txtCidade.setBounds(139, 181, 334, 26);
 		contentPane.add(txtCidade);
 		
-		txtIdade = new JTextField();
 		txtIdade.setColumns(10);
 		txtIdade.setBounds(139, 218, 334, 26);
 		contentPane.add(txtIdade);
-		
-		txtIdade.addKeyListener(new KeyAdapter() {
-			@Override
-			public void keyReleased(KeyEvent e) {
-				
-				// Obter o valor do campo de texto e a quantidade de caracteres
-				String texto = txtIdade.getText();
-				int qtdCaracteres = texto.length();
-				
-				// Verifica a quantidade de caracteres
-				if(qtdCaracteres > 0) {
-
-					// Se o código da última tecla estiver entre 49 e 58
-					if(e.getKeyCode() < 49 || e.getKeyCode() > 58) {
-						txtIdade.setText(texto.substring(0, qtdCaracteres - 1));
-					}
-					
-				}
-				
-			}
-		});
 		
 		// JButtons
 		btnCadastrar.setBounds(6, 266, 117, 29);
