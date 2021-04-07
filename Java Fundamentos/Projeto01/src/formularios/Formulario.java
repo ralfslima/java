@@ -252,8 +252,7 @@ public class Formulario extends JFrame {
 				
 			}
 		});
-		
-		
+			
 		// JScrolPane, Tabela e DefaultTableModel
 		scrollPane.setBounds(16, 318, 488, 189);
 		contentPane.add(scrollPane);
