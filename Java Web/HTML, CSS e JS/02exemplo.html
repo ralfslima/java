@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabela">
+            <!-- <tr>
+                <td>Alice</td>
+                <td>33</td>
+                <td>3444-5676</td>
+            </tr> -->
+        </tbody>
+    </table>
+
+        <!-- JS -->
+        <script>
+
+            // JSON
+            var vetor = [
+                {"nome":"Ralf", idade:31, "telefone":"3322-9933"},
+                {"nome":"Mayra", idade:32, "telefone":"3442-9765"},
+                {"nome":"Henrique", idade:38, "telefone":"3316-6433"}
+            ];
+
+            // Obter o elemento tabela
+            var tabela = document.getElementById("tabela");
+
+            // Laço
+            for(var linha = 0; linha < vetor.length; linha++){
+
+                // Criar a linha da tabela
+                var tr = tabela.insertRow(-1);
+
+                // Criar as colunas
+                var td1 = tr.insertCell(0);
+                var td2 = tr.insertCell(1);
+                var td3 = tr.insertCell(2);
+
+                // Passar os valores para cada coluna
+                td1.innerHTML = vetor[linha].nome;
+                td2.innerHTML = vetor[linha].idade;
+                td3.innerHTML = vetor[linha].telefone;
+
+            }
+
+            //console.table(vetor);
+    </script>
+</body>
+</html>
