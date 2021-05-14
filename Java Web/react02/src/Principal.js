@@ -189,12 +189,13 @@ export default class Principal extends React.Component{
                 // Cópia do vetor
                 let copiaVetor = [...this.state.clientes];
 
-                // Percorrer o vetor
-                for(let i=0; i<copiaVetor.length; i++){
-                    if(copiaVetor[i].codigo === this.state.codigo){
-                        copiaVetor[i] = retorno;
-                    }
-                }
+                // Percorrer o vetor para obter o índice a ser alterado
+                let indiceAlteracao = copiaVetor.findIndex((obj) => {
+                    return obj.codigo === this.state.codigo;
+                });
+
+                // Alterar o copiaVetor
+                copiaVetor[indiceAlteracao] = retorno;
                 
                 // Sobrepor o state clientes
                 this.setState({clientes : copiaVetor});
@@ -221,8 +222,8 @@ export default class Principal extends React.Component{
 
                 <form>
                     <div className={
-                        this.state.corMensagem == 'vermelho' ? 'alert alert-danger' :
-                        this.state.corMensagem == 'verde' ? 'alert alert-success' : 
+                        this.state.corMensagem === 'vermelho' ? 'alert alert-danger' :
+                        this.state.corMensagem === 'verde' ? 'alert alert-success' : 
                         ''
                     }>{this.state.txtMensagem}</div>
 
